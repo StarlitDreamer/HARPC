@@ -1,4 +1,4 @@
-package com.yupi.example.common.model;
+package com.rpc.example.common.model;
 
 import java.io.Serializable;
 

@@ -3,7 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.rpc</groupId>
   <artifactId>my-rpc</artifactId>
-  <packaging>war</packaging>
+  <packaging>pom</packaging>
+  <modules>
+    <module>example-common</module>
+    <module>example-consumer</module>
+    <module>example-provider</module>
+    <module>my-rpc-easy</module>
+  </modules>
   <version>1.0-SNAPSHOT</version>
   <name>my-rpc Maven Webapp</name>
   <url>http://maven.apache.org</url>

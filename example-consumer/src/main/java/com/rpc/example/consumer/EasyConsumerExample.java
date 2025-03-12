@@ -1,4 +1,4 @@
-package com.yupi.example.consumer;
+package com.rpc.example.consumer;
 
 import com.rpc.example.common.model.User;
 import com.rpc.example.common.service.UserService;
@@ -10,7 +10,8 @@ public class EasyConsumerExample {
 
     public static void main(String[] args) {
         // todo 需要获取 UserService 的实现类对象
-        UserService userService = null;
+        // 静态代理
+        UserService userService = new UserServiceProxy();
         User user = new User();
         user.setName("yupi");
         // 调用

@@ -1,6 +1,6 @@
-package com.yupi.example.common.service;
+package com.rpc.example.common.service;
 
-import com.yupi.example.common.model.User;
+import com.rpc.example.common.model.User;
 
 /**
  * 用户服务

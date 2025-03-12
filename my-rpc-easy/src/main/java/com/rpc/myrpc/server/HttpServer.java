@@ -1,2 +1,14 @@
-package com.rpc.myrpc.server;public class HttpServer {
+package com.rpc.myrpc.server;
+
+/**
+ * HTTP 服务器接口
+ */
+public interface HttpServer {
+
+    /**
+     * 启动服务器
+     *
+     * @param port
+     */
+    void doStart(int port);
 }

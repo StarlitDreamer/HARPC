@@ -1,4 +1,4 @@
-package com.rpc.example.consumer;
+package com.rpc.example.proxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;

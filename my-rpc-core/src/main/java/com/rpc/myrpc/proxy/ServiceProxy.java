@@ -1,4 +1,4 @@
-package com.rpc.example.proxy;
+package com.rpc.myrpc.proxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;

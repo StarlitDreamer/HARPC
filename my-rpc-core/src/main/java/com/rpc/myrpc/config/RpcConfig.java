@@ -1,5 +1,6 @@
 package com.rpc.myrpc.config;
 
+import com.rpc.myrpc.serializer.SerializerKeys;
 import lombok.Data;
 
 /**
@@ -26,10 +27,15 @@ public class RpcConfig {
     /**
      * 服务器端口号
      */
-    private Integer serverPort = 8080;
+    private Integer serverPort = 12345;
 
     /**
      * 模拟调用
      */
     private boolean mock = false;
+
+    /**
+     * 序列化器
+     */
+    private String serializer = SerializerKeys.JDK;
 }

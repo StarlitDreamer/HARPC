@@ -1,10 +1,11 @@
 package com.rpc.myrpc.server;
 
+import com.rpc.myrpc.RpcApplication;
 import com.rpc.myrpc.model.RpcRequest;
 import com.rpc.myrpc.model.RpcResponse;
 import com.rpc.myrpc.registry.LocalRegistry;
-import com.rpc.myrpc.serializer.JdkSerializer;
 import com.rpc.myrpc.serializer.Serializer;
+import com.rpc.myrpc.serializer.SerializerFactory;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerRequest;
@@ -21,7 +22,8 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
     @Override
     public void handle(HttpServerRequest request) {
         // 指定序列化器
-        final Serializer serializer = new JdkSerializer();
+        final Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
+
 
         // 记录日志
         System.out.println("Received request: " + request.method() + " " + request.uri());

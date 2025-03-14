@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class RpcResponse implements Serializable {
 
     /**
-     * 响应数据
+     *  * 响应数据
      */
     private Object data;
 

@@ -30,7 +30,7 @@ public class UserServiceProxy implements UserService {
         try {
             byte[] bodyBytes = serializer.serialize(rpcRequest);
             byte[] result;
-            try (HttpResponse httpResponse = HttpRequest.post("http://localhost:12345")
+            try (HttpResponse httpResponse = HttpRequest.post("http://localhost:8080")
                     .body(bodyBytes)
                     .execute()) {
                 result = httpResponse.bodyBytes();

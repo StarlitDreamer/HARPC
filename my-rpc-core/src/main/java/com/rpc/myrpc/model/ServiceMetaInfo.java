@@ -1,5 +1,7 @@
 package com.rpc.myrpc.model;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  * 服务元信息（注册信息）
  */
@@ -49,6 +51,18 @@ public class ServiceMetaInfo {
      */
     public String getServiceNodeKey() {
         return String.format("%s/%s:%s", getServiceKey(), serviceHost, servicePort);
+    }
+
+    /**
+     * 获取完整服务地址
+     *
+     * @return
+     */
+    public String getServiceAddress() {
+        if (!StrUtil.contains(serviceHost, "http")) {
+            return String.format("http://%s:%s", serviceHost, servicePort);
+        }
+        return String.format("%s:%s", serviceHost, servicePort);
     }
 
 }
